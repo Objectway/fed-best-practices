@@ -134,7 +134,7 @@
                 <div class="dragHeaderMiddle" style="left: 4px;">
                   <div class="dragLogoDiv" style="display: none;"></div>
                   <div style="position: absolute; top: 50%; height: 100%; left: 4px;">
-                      <div class="dragHeaderText">Shortcuts</div>
+                    <div class="dragHeaderText">Shortcuts</div>
                   </div>
                 </div>
 
@@ -151,6 +151,22 @@
               - Overcomplicated structure
               - CSS classes with inline CSS
             </script>
+          </section>
+
+          <section>
+            <h3>TABLES!</h3>
+            <img src="./images/tables-illumas.png">
+            <small class="fragment">what's wrong with them ?</small>
+          </section>
+
+          <section>
+            <h2>Why are tables wrong?</h2>
+            <ul>
+              <li>They're slow</li>
+              <li>Hard to maintain</li>
+              <li>They should be used for content not for layout !</li>
+              <li class="fragment"> Every time you are nesting a table a kitten dies ...</li>
+            </ul>
           </section>
 
         </section>
@@ -197,12 +213,12 @@
 
               ```
               .SearchBox__inputField {
-              ...
+                ...
               }
 
               .SearchBox__mainButton {
-              font-size: 2em;
-              ...
+                font-size: 2em;
+                ...
               }
               ```
             </script>
@@ -220,12 +236,12 @@
               ```
               /* Block modifier */
               .SearchBox--compact {
-              padding: 0;
+                padding: 0;
               }
 
               /* Element modifier */
               .SearchBox__mainButton--small {
-              font-size: 1.4em;
+                font-size: 1.4em;
               }
               ```
             </script>
@@ -244,7 +260,7 @@
 
               ```
               .SearchBox__mainButton.is-focused {
-              transform: scale(1.2);
+                transform: scale(1.2);
               }
               ```
 
@@ -262,11 +278,11 @@
 
               ```
               .u-alignRight {
-              text-align: right !important;
+                text-align: right !important;
               }
 
               .u-hidden {
-              display: none !important;
+                display: none !important;
               }
               ```
             </script>
@@ -286,7 +302,6 @@
 
               Using a class name to describe content is redundant because content describes itself.
               We need a class name that describes the style that we want to apply to that element with a good abstraction
-
 
               ```
               /* Runs the risk of becoming out of date; not very maintainable. */
