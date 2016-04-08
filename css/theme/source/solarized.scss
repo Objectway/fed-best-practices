@@ -56,6 +56,12 @@ $selectionBackgroundColor: $magenta;
 // 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
 // }
 
+.reveal img.is-borderless {
+  border: 0;
+  box-shadow: none;
+}
+
+
 
 
 // Theme template ------------------------------

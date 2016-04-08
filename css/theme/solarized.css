@@ -11,6 +11,10 @@ html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
+.reveal img.is-borderless {
+  border: 0;
+  box-shadow: none; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
