@@ -255,13 +255,21 @@
           </section>
 
           <section>
-            <p>Basic example:</p>
+            <h2>WHICH MEANS</h2>
             <p class="fragment">An input field usable everywhere, same structure for every similar elements on the page</p>
-            <p class="fragment">Keyword: simplification</p>
+            <p class="fragment"><b>Keyword</b>: <u>simplification</u></p>
           </section>
 
           <section>
+            <small>FROM OUR EXPERIENCE</small>
             <h3>KitchenSinc is the key</h3>
+            <h5 class="fragment">Write reusable elements made with reausable code</h5>
+            <h5 class="fragment">Avoid at all cost duplication</h5>
+            <h5 class="fragment">Simplify, do not overcomplicate your code</h5>
+          </section>
+
+          <section>
+            <h1>KEEP IT SIMPLE</h1>
           </section>
 
         </section>
@@ -284,7 +292,7 @@
           </section>
 
           <section>
-            <h3>CLI !</h3>
+            <h2>CLI</h2>
             <img class="is-borderless" src="./images/cli.png">
           </section>
 
@@ -296,13 +304,144 @@
           </section>
 
           <section>
-            <h2>EMBRACE THE POWER OF THE CLI</h2>
+            <small class="fragment">STRONGLY SUGGESTED</small>
+            <h3>EMBRACE THE POWER OF THE CLI</h3>
           </section>
+
+          <section>
+            <h2>GULP GRUNT BROCCOLI AND THE LIKES...</h2>
+          </section>
+
+          <section>
+            <p>
+              There are more than a few of task runners, some used more than other, the choice we made is based on speed, scripting language and reliability.
+            </p>
+          </section>
+
+          <section>
+            <img src="./images/gulp-white-text.svg" alt="Gulp" class="is-borderless">
+            <br>
+            <img src="./images/node.png" alt="Gulp" class="is-borderless" style="max-width: 15%; max-height: 15%; background: #333; padding: 30px 40px;">
+            <p>
+              <b>Gulp</b> is written in <b>Nodejs</b>, it's probably the fastest of the group, it is extremely solid and widely used.
+            </p>
+          </section>
+
+
+          <section>
+            <h2>Hot to use Gulp</h2>
+            <p>From <a href="https://raw.githubusercontent.com/gulpjs/gulp/master/docs/getting-started.md">Gulp getting started documentation</a></p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              #### 1. Install gulp globally:
+
+              __If you have previously installed a version of gulp globally, please run `npm rm --global gulp`
+              to make sure your old version doesn't collide with gulp-cli.__
+
+              ```sh
+              $ npm install --global gulp-cli
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              #### 2. Install gulp in your project devDependencies:
+
+              ```sh
+              $ npm install --save-dev gulp
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              #### 3. Create a gulpfile.js at the root of your project:
+
+              ```js
+              var gulp = require('gulp');
+
+              gulp.task('default', function() {
+                // place code for your default task here
+              });
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              #### 4. Run gulp:
+
+              ```sh
+              $ gulp
+              ```
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              The default task will run and do nothing.
+
+              To run individual tasks, use `gulp <task> <othertask>`.
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Where do I go now?
+
+              You have an empty gulpfile and everything is installed. How do you REALLY get started? Check out the [recipes](recipes) and the [list of articles](README.md#articles) for more information.
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## .src, .watch, .dest, CLI args - How do I use these things?
+
+              For API specific documentation you can check out the [documentation for that](API.md).
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Available Plugins
+
+              The gulp community is growing, with new plugins being added daily. See the [main website](http://gulpjs.com/plugins/) for a complete list.
+            </script>
+          </section>
+
+          <section>
+            <h3>A simple task to compile SASS</h3>
+<pre><code data-noescape>
+npm install gulp-sass --save-dev
+
+</code></pre>
+
+<pre><code class="js" data-noescape>
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+  return gulp.src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./sass/**/*.scss', ['sass']);
+});
+
+</code></pre>
+          </section>
+
 
         </section>
 
         <!-- BEM -->
         <section>
+
           <section>
             <h1>BEM</h1>
             <h3>BLOCK ELEMENT MODIFIER</h3>
@@ -310,7 +449,6 @@
               At <a href="https://github.com/Objectway/styleguides/blob/master/frontend-styleguides.md">this link</a>
               there is a short description on how we are using <strong>BEM</strong> at Objectway.
             </p>
-
           </section>
 
           <section data-markdown>
