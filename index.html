@@ -27,8 +27,9 @@
     </script>
 
     <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
+      <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
   </head>
 
   <body>
@@ -77,6 +78,13 @@
             <ul>
               <li>Removal of tables of tables of tables</li>
               <li>Avoid cryptic class names</li>
+              <li>Write maintainable code
+                <ul class="fragment">
+                  <li>Use preprocessors</li>
+                  <li>Use Jade when possible</li>
+                  <li class="fragment"><strong>Mixins Placeholders Variables</strong></li>
+                </ul>
+              </li>
             </ul>
           </section>
 
@@ -145,12 +153,13 @@
             </script>
           </section>
 
-          <section data-markdown>
-            <script type="text/template">
-              - Inline CSS is **NOT** maintainable
-              - Overcomplicated structure
-              - CSS classes with inline CSS
-            </script>
+          <section>
+            <ul>
+              <li>Inline CSS is <b>NOT</b> maintainable</li>
+              <li>Overcomplicated structure</li>
+              <li class="fragment">CSS classes with inline CSS</li>
+              <li class="fragment"><b>Inline CSS!</b></li>
+            </ul>
           </section>
 
           <section>
@@ -169,9 +178,93 @@
             </ul>
           </section>
 
-        </section>
 
-        <!-- CORRECT EXAMPLES -->
+          <section>
+            <h2>What we should use?</h2>
+            <ul>
+              <li>Easily maintainable code
+                <ul>
+                  <li>Atomization of the elements
+                    <ul>
+                      <li>Break into small pieces of repeatable code</li>
+                      <li class="fragment">Buttons, tables, form fields ...</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>SASS helps</h2>
+            <p>Use of placeholders and variables can help to keep the front-end structure clean</p>
+
+<pre><code class="SCSS" data-noescape>
+// -----------
+// DATE PICKER
+// -----------
+
+%DatePicker {
+  background: $white;
+  border-radius: 0.187em;
+  width: em-calc(280);
+}
+
+</code></pre>
+
+          </section>
+
+          <section>
+            <h2>EXTEND!</h2>
+
+<pre><code class="SCSS">
+.HeaderDateSelector {
+  @extend %DatePicker;
+  // overrides
+  ...
+}
+
+</code></pre>
+
+          </section>
+
+
+          <section>
+            <h2>Wrong!</h2>
+            <img src="./images/equalbutdifferent.png">
+            <p class="fragment">Two identical elements made with different piece of code !</p>
+          </section>
+
+          <section>
+            <h2>Correct!</h2>
+            <img src="./images/illumas-ks.png">
+          </section>
+
+          <section>
+            <h3>From the Illumas refactoring project</h3>
+            <ul>
+              <li>Create a KitchenSinc</li>
+              <li>Create basic reusable elements</li>
+              <li class="fragment">Use them on your project :)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Input field example</h3>
+            <img src="./images/ks-2-form.png">
+          </section>
+
+          <section>
+            <p>Basic example:</p>
+            <p class="fragment">An input field usable everywhere, same structure for every similar elements on the page</p>
+            <p class="fragment">Keyword: simplification</p>
+          </section>
+
+          <section>
+            <h3>KitchenSinc is the key</h3>
+          </section>
+
+        </section>
 
         <!-- TASK RUNNERS -->
         <section>
@@ -368,7 +461,7 @@
 
       <script>
 
-        // Full list of configuration options available at:
+      // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
