@@ -199,7 +199,7 @@
             <h2>SASS helps</h2>
             <p>Use of placeholders and variables can help to keep the front-end structure clean</p>
 
-<pre><code class="SCSS" data-noescape>
+<pre><code class="SCSS" data-trim data-noescape>
 // -----------
 // DATE PICKER
 // -----------
@@ -209,7 +209,6 @@
   border-radius: 0.187em;
   width: em-calc(280);
 }
-
 </code></pre>
 
           </section>
@@ -217,13 +216,12 @@
           <section>
             <h2>EXTEND!</h2>
 
-<pre><code class="SCSS">
+<pre><code class="SCSS" data-trim data-noescape>
 .HeaderDateSelector {
   @extend %DatePicker;
   // overrides
   ...
 }
-
 </code></pre>
 
           </section>
@@ -335,7 +333,7 @@
 
           <section data-markdown>
             <script type="text/template">
-              #### 1. Install gulp globally:
+              ### 1. Install gulp globally:
 
               __If you have previously installed a version of gulp globally, please run `npm rm --global gulp`
               to make sure your old version doesn't collide with gulp-cli.__
@@ -348,7 +346,7 @@
 
           <section data-markdown>
             <script type="text/template">
-              #### 2. Install gulp in your project devDependencies:
+              ### 2. Install gulp in your project devDependencies:
 
               ```sh
               $ npm install --save-dev gulp
@@ -358,7 +356,7 @@
 
           <section data-markdown>
             <script type="text/template">
-              #### 3. Create a gulpfile.js at the root of your project:
+              ### 3. Create a gulpfile.js at the root of your project:
 
               ```js
               var gulp = require('gulp');
@@ -372,7 +370,7 @@
 
           <section data-markdown>
             <script type="text/template">
-              #### 4. Run gulp:
+              ### 4. Run gulp:
 
               ```sh
               $ gulp
@@ -413,13 +411,12 @@
           </section>
 
           <section>
-            <h3>A simple task to compile SASS</h3>
-<pre><code data-noescape>
+            <h2>A simple task to compile SASS</h2>
+<pre><code data-noescape data-trim>
 npm install gulp-sass --save-dev
-
 </code></pre>
 
-<pre><code class="js" data-noescape>
+<pre><code class="js" data-trim data-noescape>
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
@@ -432,10 +429,40 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
 });
-
 </code></pre>
           </section>
 
+
+          <section>
+            <h2>Our Gulp structure</h2>
+<pre><code class="txt" data-trim data-noescape>
+.
+├── gulpfile.babel.js
+└── tasks
+  ├── gulp.autoreload.js
+  ├── gulp.browsersync.js
+  ├── gulp.clean.js
+  ├── gulp.copy.js
+  ├── gulp.jade.js
+  ├── gulp.minify.js
+  ├── gulp.sass-lint.js
+  ├── gulp.sass.js
+  ├── gulp.script.js
+  ├── gulp.stylestats.js
+  ├── gulp.svgsprite.js
+  ├── gulp.vendor.js
+  └── gulp.watch.js
+</pre></code>
+          </section>
+
+          <section>
+            <ul>
+              <li>Modular</li>
+              <li class="fragment">ECMAScript 6 <span class="fragment">with the aid of <a href="https://babeljs.io/">Babeljs</a></span></li>
+              <li class="fragment">Easier to maintain</li>
+              <li class="fragment">Some complexity could result in a steeper learning curve</li>
+            </ul>
+          </section>
 
         </section>
 
@@ -464,7 +491,7 @@ gulp.task('sass:watch', function () {
               .SearchBox {
                 padding: 20px;
                 font-size: 2rem;
-              ...
+                ...
               }
               ```
             </script>
@@ -599,7 +626,7 @@ gulp.task('sass:watch', function () {
 
       <script>
 
-      // Full list of configuration options available at:
+        // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
