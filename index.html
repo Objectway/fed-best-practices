@@ -510,6 +510,24 @@ gulp.task('sass:watch', function () {
             </ul>
           </section>
 
+
+          <section>
+            <h2>Partials and Imports</h2>
+            <p>You can create partial Sass files that contain little snippets of CSS that you can include in other Sass files. This is a great way to modularize your CSS and help keep things easier to maintain.</p>
+            <pre><code class="scss" data-trim data-noescape>
+// _reset.scss
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+            </code></pre>
+
+            <pre><code class="scss" data-trim data-noescape>
+// main.scss
+@import 'reset';
+            </code></pre>
+          </section>
           <section>
             <h2>Nesting</h2>
             <pre><code class="SCSS" data-trim data-noescape>
@@ -538,6 +556,121 @@ $variable = red;
 .MyButton {
   @extend %GenericButton;
 }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Mixins</h2>
+            <pre><code class="scss" data-trim data-noescape>
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+            </code></pre>
+
+          </section>
+
+          <section>
+            <h2>Extend/Inheritance</h2>
+            <pre><code class="scss" data-trim data-noescape>
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>@if</h2>
+            <pre><code class="scss" data-trim data-noescape>
+$type: monster;
+
+p {
+  @if $type == ocean {
+    color: blue;
+  } @else if $type == matador {
+    color: red;
+  } @else if $type == monster {
+    color: green;
+  } @else {
+    color: black;
+  }
+}
+            </code></pre>
+            <pre><code class="css" data-trim data-noescape>
+p {
+  color: green; }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>@for</h2>
+            <pre><code class="scss" data-trim data-noescape>
+@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+            </code></pre>
+            <pre><code class="css" data-trim data-noescape>
+.item-1 {
+  width: 2em; }
+.item-2 {
+  width: 4em; }
+.item-3 {
+  width: 6em; }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>@each</h2>
+            <pre><code class="scss" data-trim data-noescape>
+@each $animal in puma, sea-slug, egret, salamander {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+  }
+}
+            </code></pre>
+            <pre><code class="css" data-trim data-noescape>
+.puma-icon {
+  background-image: url('/images/puma.png'); }
+.sea-slug-icon {
+  background-image: url('/images/sea-slug.png'); }
+.egret-icon {
+  background-image: url('/images/egret.png'); }
+.salamander-icon {
+  background-image: url('/images/salamander.png'); }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>@while</h2>
+            <pre><code class="scss" data-trim data-noescape>
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} { width: 2em * $i; }
+  $i: $i - 2;
+}
+            </code></pre>
+            <pre><code class="css" data-trim data-noescape>
+.item-6 {
+  width: 12em; }
+
+.item-4 {
+  width: 8em; }
+
+.item-2 {
+  width: 4em; }
             </code></pre>
           </section>
 
