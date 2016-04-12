@@ -199,7 +199,7 @@
             <h2>SASS helps</h2>
             <p>Use of placeholders and variables can help to keep the front-end structure clean</p>
 
-<pre><code class="SCSS" data-trim data-noescape>
+            <pre><code class="SCSS" data-trim data-noescape>
 // -----------
 // DATE PICKER
 // -----------
@@ -209,20 +209,20 @@
   border-radius: 0.187em;
   width: em-calc(280);
 }
-</code></pre>
+            </code></pre>
 
           </section>
 
           <section>
             <h2>EXTEND!</h2>
 
-<pre><code class="SCSS" data-trim data-noescape>
+            <pre><code class="SCSS" data-trim data-noescape>
 .HeaderDateSelector {
   @extend %DatePicker;
   // overrides
   ...
 }
-</code></pre>
+            </code></pre>
 
           </section>
 
@@ -412,11 +412,11 @@
 
           <section>
             <h2>A simple task to compile SASS</h2>
-<pre><code data-noescape data-trim>
+            <pre><code data-noescape data-trim>
 npm install gulp-sass --save-dev
-</code></pre>
+            </code></pre>
 
-<pre><code class="js" data-trim data-noescape>
+            <pre><code class="js" data-trim data-noescape>
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
@@ -429,13 +429,12 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
 });
-</code></pre>
+            </code></pre>
           </section>
-
 
           <section>
             <h2>Our Gulp structure</h2>
-<pre><code class="txt" data-trim data-noescape>
+            <pre><code class="txt" data-trim data-noescape>
 .
 ├── gulpfile.babel.js
 └── tasks
@@ -452,7 +451,7 @@ gulp.task('sass:watch', function () {
   ├── gulp.svgsprite.js
   ├── gulp.vendor.js
   └── gulp.watch.js
-</pre></code>
+            </pre></code>
           </section>
 
           <section>
@@ -462,6 +461,84 @@ gulp.task('sass:watch', function () {
               <li class="fragment">Easier to maintain</li>
               <li class="fragment">Some complexity could result in a steeper learning curve</li>
             </ul>
+          </section>
+
+          <section>
+            <h2>But...</h2>
+            <ul>
+              <li class="fragment">We don't need this level of complexity</li>
+              <li class="fragment">We can run a basic SASS compiler with a linter...</li>
+              <li class="fragment">...or we can customize what we have to reach the level of complexity required</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Keep in mind</h2>
+            <p class="fragment">
+              We can modify what we already have, we can build a custom Gulp structure
+              we can keep it simple, we can enforce the linting of SASS files and our
+              style guides.
+            </p>
+            <p class="fragment">
+              Most importantly: <span class="fragment"><b>we can write better code.</b></span>
+            </p>
+          </section>
+
+        </section>
+
+        <!-- SASS -->
+
+        <section>
+
+          <section>
+            <img src="./images/sass.svg" alt="SASS" class="is-borderless">
+            <p>A brief explanation</p>
+          </section>
+
+          <section>
+            <p><b>Sass:</b> Syntactically Awesome Style Sheets</p>
+            <p class="fragment"><a href="http://sass-lang.com/">Sass website</a></p>
+          </section>
+
+          <section>
+            <h2>Why SASS</h2>
+            <ul>
+              <li class="fragment">It's widely used</li>
+              <li class="fragment">Great documentation</li>
+              <li class="fragment">Almost a standard <span class="fragment">or considered like that</span></li>
+              <li class="fragment">Very powerful</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Nesting</h2>
+            <pre><code class="SCSS" data-trim data-noescape>
+.class {
+  .class {
+    ...
+  }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>variables</h2>
+            <pre><code class="scss" data-trim data-noescape>
+$variable = red;
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Placeholders</h2>
+            <pre><code class="scss" data-trim data-noescape>
+%GenericButton {
+  ...
+}
+
+.MyButton {
+  @extend %GenericButton;
+}
+            </code></pre>
           </section>
 
         </section>
@@ -626,7 +703,7 @@ gulp.task('sass:watch', function () {
 
       <script>
 
-        // Full list of configuration options available at:
+      // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
