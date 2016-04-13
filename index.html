@@ -53,6 +53,34 @@
           </p>
         </section>
 
+        <!-- SCOPE OF THE COURSE -->
+
+        <section>
+
+          <section>
+            <h1>WHERE ARE WE GOING</h1>
+          </section>
+
+          <section>
+            <h2>This course has been created to</h2>
+            <ul>
+              <li class="fragment">Give you better knowledge of OW actual technology stack</li>
+              <li class="fragment">Help you understand FED best practices</li>
+              <li class="fragment">Explain the meaning of BEM, ITCSS, SASS and preprocessors</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>At the end of this course</h2>
+            <ul>
+              <li class="fragment">You'll understand how to save thousand of kittens</li>
+              <li class="fragment">You will be able to optimize your code</li>
+              <li class="fragment">You will be able to improve the maintainability of your projects</li>
+            </ul>
+          </section>
+
+        </section>
+
         <!-- first section HTML/CSS IS EASY -->
         <section>
           <section>
@@ -77,9 +105,11 @@
           <section>
             <h2>Maintenance is the key</h2>
             <ul>
-              <li>Removal of tables of tables of tables</li>
-              <li>Avoid cryptic class names</li>
-              <li>Write maintainable code
+              <li><b>ALWAYS</b> use external style sheets</li>
+              <li><b>ALWAYS</b> use external js files</li>
+              <li class="fragment">Do <b>NOT</b> use tables of tables of tables ...</li>
+              <li class="fragment">Avoid cryptic class names</li>
+              <li class="fragment">Write maintainable code
                 <ul class="fragment">
                   <li>Use preprocessors</li>
                   <li>Use Jade when possible</li>
@@ -94,8 +124,8 @@
             <ul>
               <li>Limit the use of JavaScript to the strict necessary
                 <ul>
-                  <li>Use CSS whenever is possible</li>
-                  <li>Do not use js to replace CSS functionalities</li>
+                  <li class="fragment">Use CSS whenever is possible</li>
+                  <li class="fragment">Do not use js to replace CSS functionalities</li>
                 </ul>
               </li>
             </ul>
@@ -106,27 +136,30 @@
             <ul>
               <li>Adopt methodologies like BEM and ITCSS
                 <ul>
-                  <li>To produce maintainable code</li>
-                  <li>Important to follow a methodology</li>
+                  <li class="fragment">To produce maintainable code</li>
+                  <li class="fragment">Important to follow a methodology</li>
                 </ul>
               </li>
               <li>Use linters
                 <ul>
-                  <li>To check code</li>
-                  <li>To standardize the code written by team members</li>
+                  <li class="fragment">To check code</li>
+                  <li class="fragment">To standardize the code written by team members</li>
                 </ul>
               </li>
             </ul>
           </section>
+
+          <section>
+            <h1>Maintenance is the key</h1>
+          </section>
+
         </section>
 
         <!-- EXAMPLES -->
         <section>
 
           <section>
-            <h1>EXAMPLES</h1>
-            <p>Maintainability examples based on <b>Illumas</b> project</p>
-            <small class="fragment">no pun intended :)</small>
+            <h1>SOME EXAMPLES</h1>
           </section>
 
           <section data-markdown>
@@ -134,20 +167,10 @@
               ## What's wrong with this?
 
               ```html
-              <div name="dragwidget" title="ML" class="dragHeaderClassWidget"
-                onclick="zenPage.getComponent(139).launch()"
-                id="header_139" oncontextmenu="return false;">
-
-                <div class="dragHeaderLeft" style="display: none;"></div>
-                <div class="dragHeaderMiddle" style="left: 4px;">
-                  <div class="dragLogoDiv" style="display: none;"></div>
-                  <div style="position: absolute; top: 50%; height: 100%; left: 4px;">
-                    <div class="dragHeaderText">Shortcuts</div>
-                  </div>
+              <div class="headerOne" style="background: blue;>
+                <div class="headerContent" style="position: absolute; top: 0; right: 0;">
+                  <input type="text" style="border: 1px solid red;">
                 </div>
-
-                <div class="dragHeaderRight" style="width: 0px;"></div>
-
               </div>
               ```
             </script>
@@ -156,15 +179,16 @@
           <section>
             <ul>
               <li>Inline CSS is <b>NOT</b> maintainable</li>
-              <li>Overcomplicated structure</li>
-              <li class="fragment">CSS classes with inline CSS</li>
+              <li class="fragment">CSS classes with inline CSS?!</li>
               <li class="fragment"><b>Inline CSS!</b></li>
             </ul>
+            <p>
+              <small class="fragment">On a side note, 4 kittens died to write this code </small>
+            </p>
           </section>
 
           <section>
-            <h3>TABLES!</h3>
-            <img src="./images/tables-illumas.png">
+            <h1>TABLES</h1>
             <small class="fragment">what's wrong with them ?</small>
           </section>
 
@@ -174,7 +198,7 @@
               <li>They're slow</li>
               <li>Hard to maintain</li>
               <li>They should be used for content not for layout !</li>
-              <li class="fragment"> Every time you are nesting a table a kitten dies ...</li>
+              <li class="fragment">Every time you are nesting a table a kitten dies...</li>
             </ul>
           </section>
 
@@ -227,8 +251,10 @@
 
           <section>
             <h2>Wrong!</h2>
-            <img src="./images/equalbutdifferent.png">
-            <p class="fragment">Two identical elements made with different piece of code !</p>
+            <h3>Two identical elements made with different piece of code !</h3>
+            <p>
+              <small class="fragment">For example, two similar input field, two buttons...</small>
+            </p>
           </section>
 
           <section>
