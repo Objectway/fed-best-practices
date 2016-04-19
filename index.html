@@ -536,12 +536,10 @@ gulp.task('sass:watch', function () {
 
           <section>
             <img src="./images/sass.svg" alt="SASS" class="is-borderless">
-            <p>A brief explanation</p>
           </section>
 
           <section>
-            <h1>Sass</h1>
-            <h3>Syntactically Awesome Style Sheets</h3>
+            <h2>Syntactically Awesome Style Sheets</h2>
             <p class="fragment"><a href="http://sass-lang.com/">Sass website</a></p>
           </section>
 
@@ -778,13 +776,13 @@ $i: 6;
             <p>
               In computer programming, lint is a Unix utility that flags some suspicious and non-portable constructs (likely to be bugs) in C language source code;<br>
             </p>
-            <p>
+            <p class="fragment">
               generically, lint or a linter is any tool that flags suspicious usage in software written in any computer language.
             </p>
-            <p>
+            <p class="fragment">
               The term lint-like behavior is sometimes applied to the process of flagging suspicious language usage.
             </p>
-            <p>
+            <p class="fragment">
               Lint-like tools generally perform static analysis of source code.
             </p>
           </section>
@@ -792,18 +790,23 @@ $i: 6;
           <section>
             <h2>What we lint ?</h2>
             <ul>
-              <li>SCSS</li>
-              <li>JavaScript</li>
-              <li>Typescript</li>
-              <li>Jade</li>
-              <li>HTML</li>
+              <li class="fragment">SCSS</li>
+              <li class="fragment">JavaScript
+                <ul>
+                  <li class="fragment"><a href="http://eslint.org/">ESlint</a></li>
+                  <li class="fragment"><a href="http://jshint.com/">JSHint</a></li>
+                </ul>
+              </li>
+              <li class="fragment">Typescript</li>
+              <li class="fragment">Jade</li>
+              <li class="fragment">HTML</li>
             </ul>
           </section>
 
           <section>
             <h2>How do we lint ?</h2>
             <ul>
-              <li>Editors</li>
+              <li class="fragment">Editors</li>
               <li class="fragment">Task runners (GULP)</li>
             </ul>
             <p class="fragment">
@@ -811,7 +814,7 @@ $i: 6;
             </p>
             <p class="fragment">
               <a href="https://github.com/brigade/scss-lint/blob/master/config/default.yml" target="_blank">SCSS-LINT default configuration file</a>
-              it is more than 250 lines of possible configurations to bring styling uniformity between team members.
+              it is more than 250 lines settings to help you obtain styling uniformity between team members and to prevent errors.
             </p>
           </section>
 
