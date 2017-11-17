@@ -8,3 +8,5 @@ css/reveal.min.css
 js/reveal.min.js
 .idea
 bower_components
+.vscode
+package-lock.json
